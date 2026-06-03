@@ -1,0 +1,23 @@
+services:
+  # 🐍 1. The FastAPI Backend Service
+  - type: web
+    name: food-order-backend
+    env: python
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: DATABASE_URL
+        sync: false # 💡 This tells Render to ask the buyer to paste their own database URL!
+
+  # ⚛️ 2. The React Frontend Static Site
+  - type: static
+    name: food-order-frontend
+    env: static
+    buildCommand: "cd frontend && npm install && npm run build"
+    publishDir: "frontend/dist" # Change to "build" if not using Vite
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          type: web
+          name: food-order-backend
+          property: url
