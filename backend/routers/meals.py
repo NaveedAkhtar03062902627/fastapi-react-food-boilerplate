@@ -1,0 +1,1 @@
+# meal get and post end points are configure in this file

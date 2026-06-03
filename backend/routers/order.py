@@ -1,0 +1,1 @@
+# order, customer and order itme post end points are configured in this file
