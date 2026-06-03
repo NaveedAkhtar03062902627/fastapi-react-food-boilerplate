@@ -1,5 +1,7 @@
 # Full-Stack Food Ordering App Template (React + FastAPI)
 
+Want to save 10+ hours of setup? Click here https://naveedaiengineer.lemonsqueezy.com/checkout/buy/d1885571-0df7-425f-a355-6406ea57f891 to buy the complete full-stack source code template on Lemon Squeezy
+
 A clean, production-ready full-stack boilerplate built with **React** (Frontend) and **FastAPI** (Backend) using **PostgreSQL** for data persistence. This template is designed as a lightweight, un-opinionated foundation to jumpstart your e-commerce or food delivery SaaS project, saving you over 10+ hours of boilerplate configuration.
 
 ---
